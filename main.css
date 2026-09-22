@@ -1,8 +1,30 @@
 
-.navbar-bounty {
+/* I over wrote the hover for the nav bar links */
+
+a:hover {
 
     color: #b8860b;
-    
+
+}
+
+body {
+
+    background-color: #1a1a1a;
+
+}
+
+/* I made a custom image for the drop down button of the nav bar */
+
+.navbar-hunt {
+
+    background-image: url(images/WhiteHuntCrosses.png);
+
+}
+
+.navbar-bounty {
+
+    color: #ffffff;
+
 }
 
 .bg-hunter {
