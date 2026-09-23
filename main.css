@@ -1,3 +1,10 @@
+ 
+/* Font I found that looks similar to the Hunt font */
+
+ @font-face {
+        font-family: "Playfair Display";
+        src: url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    }
 
 /* I over wrote the hover for the nav bar links */
 
@@ -7,7 +14,25 @@ a:hover {
 
 }
 
+h1 {
+
+    color: #ffffff;
+
+    margin-left: 15px;
+
+    font-size: 400%;
+
+    text-shadow: 
+    -1px -1px #b8860b,
+    1px -1px #b8860b,
+    -1px 1px #b8860b,
+    1px 1px #b8860b;
+    
+}
+
 body {
+
+    font-family: "Playfair Display";
 
     background-color: #1a1a1a;
 
@@ -30,4 +55,18 @@ body {
 .bg-hunter {
 
     background-color: #0d0d0d;
+}
+
+#main-background {
+
+    background-image: url(images/Hunt_Background_01.jpg);
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-position: center center;
+
+    background-attachment: fixed;
+
 }
