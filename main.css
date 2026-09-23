@@ -125,6 +125,14 @@ button:hover {
     background-attachment: fixed;
 
 }
+
+#Huntvideo {
+
+    border: 4px solid #0d0d0d;
+
+    margin-left: -2%;
+}
+
 .image {
 
     width: 50%;
