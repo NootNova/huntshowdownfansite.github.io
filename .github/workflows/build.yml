@@ -61,10 +61,6 @@ jobs:
           ruby-version: '3.3'
           bundler-cache: true
 
-      # Build site
-      - name: Build site
-        run: bundle exec jekyll build --trace
-
       # Deploy to gh-pages
       - name: Deploy to gh-pages
         if: github.ref == 'refs/heads/main'
