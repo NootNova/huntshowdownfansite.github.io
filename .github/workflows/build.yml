@@ -54,18 +54,10 @@ jobs:
           fi
           echo "No LFS pointers in raw source assets."
 
-      # Set up Ruby
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-
       # Deploy to gh-pages
       - name: Deploy to gh-pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: $
-          publish_dir: ./_site
-          publish_branch: gh-pages
+          publish_dir: ./public
