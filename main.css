@@ -42,9 +42,21 @@ body {
 
 .navbar-hunt {
 
+    font-size: 130%;
+
     background-image: url(images/WhiteHuntCrosses.png);
 
 }
+
+/* Added a hover to the button to make it stick out for the nav bar drop down */
+
+
+button:hover {
+
+    background-color: #b8860b;
+    
+}
+
 
 .navbar-bounty {
 
