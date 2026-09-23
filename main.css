@@ -30,12 +30,35 @@ h1 {
     
 }
 
+footer {
+
+    position: absolute;
+
+    bottom: 0;
+    
+}
+
 body {
 
     font-family: "Playfair Display";
 
     background-color: #1a1a1a;
 
+}
+
+p {
+
+    margin-left: 6px;
+
+    color: #ffffff;
+
+    text-shadow: 
+    -2px -2px #0d0d0d,
+    2px -2px #0d0d0d,
+    -2px 2px #0d0d0d,
+    2px 2px #0d0d0d;
+
+    font-size: 140%;
 }
 
 /* I made a custom image for the drop down button of the nav bar */
