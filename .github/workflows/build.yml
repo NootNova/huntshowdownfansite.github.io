@@ -30,7 +30,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir public
-          cp myvideo.mp4 public/
+          cp HuntVideo.mp4 public/
           echo "<html><body><video src='myvideo.mp4' controls></video></body></html>" > public/index.html
 
       # Step 4: Deploy to GitHub Pages
