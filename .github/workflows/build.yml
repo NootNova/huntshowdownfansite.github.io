@@ -1,63 +1,43 @@
-name: Build and Deploy
+name: Deploy LFS files to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main  # Trigger on main branch
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # Checkout code and pull LFS files
-      - name: Checkout (with LFS)
+      # Step 1: Checkout repo with LFS enabled
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          lfs: true
-          fetch-depth: 0
+          lfs: true  # Important: fetch LFS files
 
-      # Cache LFS objects
-      - name: Cache Git LFS objects
-        uses: actions/cache@v4
-        with:
-          path: .git/lfs/objects
-          key: $-git-lfs-$-$
-          restore-keys: |
-            $-git-lfs-$-
-            $-git-lfs-
-
-      # Ensure LFS files are real (materialize)
-      - name: Ensure LFS files are real (materialize)
-        shell: bash
+      # Step 2: Install Git LFS
+      - name: Install Git LFS
         run: |
-          set -euo pipefail
-          git lfs install --local
-          git lfs fetch origin "${GITHUB_SHA}"
-          git lfs checkout
-          echo "LFS files tracked (pointer -> actual):"
-          git lfs ls-files
+          git lfs install
+          git lfs pull
 
-      # Verify no LFS pointers in source assets
-      - name: Verify no LFS pointers in source assets
-        shell: bash
+      # Step 3: Build site (example: copy files to output folder)
+      - name: Prepare site
         run: |
-          set -euo pipefail
-          if grep -RIl "version https://git-lfs.github.com/spec" assets 2>/dev/null; then
-            echo "::error::Found LFS pointer(s) under assets/. 'git lfs checkout' did not materialize some files." >&2
-            exit 1
-          fi
-          echo "No LFS pointers in raw source assets."
+          mkdir public
+          cp myvideo.mp4 public/
+          echo "<html><body><video src='myvideo.mp4' controls></video></body></html>" > public/index.html
 
-      # Deploy to gh-pages
-      - name: Deploy to gh-pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
+      # Step 4: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: public
+
+      - name: Publish to Pages
+        uses: actions/deploy-pages@v3
