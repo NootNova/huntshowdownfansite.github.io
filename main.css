@@ -147,3 +147,18 @@ button:hover {
 
     margin-right: 10px;
 }
+
+.image-right {
+
+    width: 30%;
+
+    height: auto;
+
+    border: 3px solid #b8860b;
+
+    float: right;
+
+    margin-left: 20px;
+
+    margin-right: 10px;
+}
