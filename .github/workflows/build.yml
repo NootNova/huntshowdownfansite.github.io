@@ -54,17 +54,6 @@ jobs:
           fi
           echo "No LFS pointers in raw source assets."
 
-      # Set up Ruby
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
-
-      # Build site
-      - name: Build site
-        run: bundle exec jekyll build --trace
-
       # Deploy to gh-pages
       - name: Deploy to gh-pages
         if: github.ref == 'refs/heads/main'
