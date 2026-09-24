@@ -133,13 +133,13 @@ button:hover {
     margin-left: -2%;
 }
 
-.image {
+.image-left {
 
-    width: 50%;
+    width: 30%;
 
     height: auto;
 
-    border: 5px solid #b8860b;
+    border: 3px solid #b8860b;
 
     float: left;
 
