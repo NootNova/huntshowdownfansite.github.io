@@ -176,6 +176,8 @@ form {
  
 input {
 
+    border: 3px solid #ffffff;
+
     background-color: #0d0d0d;
 
     color: #ffffff;
@@ -218,6 +220,8 @@ input[type=reset]:hover {
 
 
 textarea {
+
+    border: 3px solid #ffffff;
 
     background-color: #0d0d0d;
 
