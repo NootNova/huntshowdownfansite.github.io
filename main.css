@@ -132,6 +132,36 @@ p {
     font-size: 140%;
 }
 
+.ammo-container {
+
+    display: grid;
+
+    margin-left: 4px;
+
+    margin-right: 4px;
+
+
+}
+
+.ammo-table {
+
+    color: #ffffff;
+
+
+    border-collapse: collapse;
+
+}
+
+.ammo-table th, .ammo-table td {
+
+    border: 1px solid #b8860b;
+
+    padding: 8px;
+
+    text-align: left;
+
+}
+
 /* shoved a image into the nav bar, sadly cant find away to move it how I'd truly like to */
 
 #navbar-horizontal {
