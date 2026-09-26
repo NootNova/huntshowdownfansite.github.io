@@ -16,6 +16,13 @@ a:hover {
     color: #b8860b;
 
 }
+
+a img:hover {
+
+    border: solid 8px #b8860b;
+
+}
+
 .heading {
 
     color: #ffffff;
@@ -130,6 +137,97 @@ p {
     2px 2px #0d0d0d;
 
     font-size: 140%;
+}
+
+/* did a lot to make a custom form. styling the form its self with the same rules learned for the back ground image,
+learned how to style all the parts of the form as well, using color for the placeholder and textarea helps to keep the text while where it was default black. */
+
+form {
+
+    color: #0d0d0d;
+
+    font-weight: 1000;
+
+    font-size: 120%;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+
+    border-style: groove;
+
+    border-color: #b8860b;
+
+    border-width: 5px;
+
+    background-image: url(images/Hunt_Background_05.jpg);
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-attachment: fixed;
+
+    display: grid;
+
+}
+ 
+input {
+
+    background-color: #0d0d0d;
+
+    color: #ffffff;
+
+}
+
+input::placeholder {
+
+    color: #ffffff;
+
+}
+
+input[type=submit] {
+
+    color: #ffffff;
+
+}
+
+input[type=submit]:hover {
+
+    border: solid 4px #b8860b;
+
+    text-decoration: underline;
+
+}
+
+input[type=reset] {
+
+    color: #ffffff;
+
+}
+
+input[type=reset]:hover {
+
+    border: solid 4px #b8860b;
+
+    text-decoration: underline;
+    
+}
+
+
+textarea {
+
+    background-color: #0d0d0d;
+
+    color: #ffffff;
+
+}
+
+textarea::placeholder {
+
+    color: #ffffff;
 }
 
 .ammo-container {
@@ -295,6 +393,22 @@ button:hover {
 
     display: inline;
 
+    border: solid 5px #0d0d0d;
+
+    margin-left: 6%;
+
+    margin-bottom: 10px;
+
+    width: 90%
+}
+
+
+.monster {
+
+    height: auto;
+
+    display: inline;
+
     border: solid 5px #b8860b;
 
     margin-left: 6%;
@@ -302,4 +416,5 @@ button:hover {
     margin-bottom: 10px;
 
     width: 90%
+
 }
