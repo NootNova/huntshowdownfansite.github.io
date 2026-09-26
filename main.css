@@ -272,3 +272,34 @@ button:hover {
     display: block;
 
 }
+
+.maps {
+
+    height: auto;
+
+    display: inline-block;
+
+    border: solid 2px #0d0d0d;
+
+    margin-left: 14px;
+
+    margin-bottom: 10px;
+
+    width: 90%
+
+}
+
+.map-images {
+
+    height: auto;
+
+    display: inline;
+
+    border: solid 5px #b8860b;
+
+    margin-left: 6%;
+
+    margin-bottom: 10px;
+
+    width: 90%
+}
